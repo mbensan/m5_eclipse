@@ -6,12 +6,14 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import models.Categoria;
 import models.Tarea;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import daos.CategoriaDao;
 import daos.TareaDao;
 
 /**
@@ -37,6 +39,8 @@ public class Home extends HttpServlet {
 			ArrayList<Tarea> tareas = TareaDao.getAll();		
 			System.out.println(tareas);
 			request.setAttribute("tareas", tareas);
+			ArrayList<Categoria> cats = CategoriaDao.getAll();
+			request.setAttribute("cats", cats);
 		} catch(SQLException e) {
 			System.out.println(e);
 		}
