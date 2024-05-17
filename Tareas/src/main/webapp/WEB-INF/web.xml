@@ -19,4 +19,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GestionTarea</display-name>
+    <servlet-name>GestionTarea</servlet-name>
+    <servlet-class>servlets.GestionTarea</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionTarea</servlet-name>
+    <url-pattern>/GestionTarea</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckearTarea</display-name>
+    <servlet-name>CheckearTarea</servlet-name>
+    <servlet-class>servlets.CheckearTarea</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckearTarea</servlet-name>
+    <url-pattern>/CheckearTarea</url-pattern>
+  </servlet-mapping>
 </web-app>

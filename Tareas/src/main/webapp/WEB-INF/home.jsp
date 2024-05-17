@@ -24,7 +24,11 @@
     %>
     <ul>
     	<% for (Tarea t: tareas) { %>
-    		<li><%=t.texto %> (creada en: <%=t.fecha %>)</li>
+    		<li <% if (t.completada == true){ %>class="text-decoration-line-through"<% } %>>
+    		 	<%=t.texto %> (creada en: <%=t.fecha %>)
+    		 	<a href="/Tareas/CheckearTarea?id=<%=t.id%>">Check</a>
+    		 	<a href="/Tareas/GestionTarea?id=<%=t.id%>">Delete</a>
+    		</li>
     	<% } %>
     </ul>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
